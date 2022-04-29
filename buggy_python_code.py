@@ -23,8 +23,8 @@ class RunBinSh(object):
     def __reduce__(self):
         return (subprocess.Popen, (('/bin/sh',),))
 
-def import_urlib_version(version):
-    exec("import urllib%s as urllib" % version)
+def import_urlib_version():
+    exec("import urllib-1.17 as urllib")
 
 @app.route('/')
 def index():
